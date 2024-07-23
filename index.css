@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+body {
+  background-color: #ffffe0;
+}
+a {
+  text-decoration: none;
+}
+.quit {
+  margin-left: 0.4rem;
+}
+.quit a {
+  color: #333;
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+.login-box {
+  padding: 0.8rem 0.7rem;
+}
+.login-box .header {
+  display: flex;
+}
+.login-box .header .logo {
+  width: 1rem;
+  height: 1rem;
+}
+.login-box .header .title {
+  margin-left: 0.3rem;
+  line-height: 1rem;
+  font-weight: 400;
+  font-size: 0.7rem;
+}
+.login-box .tip {
+  margin-top: 0.25rem;
+  margin-bottom: 0.4rem;
+  color: #999;
+  font-weight: 400;
+  font-size: 0.3rem;
+}
+.login-box .account,
+.login-box .password {
+  margin-top: 0.4rem;
+  width: 8.6rem;
+  height: 1.2rem;
+  background-color: transparent;
+  font-size: 0.55rem;
+  line-height: 1.2rem;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+.login-box .account.empty,
+.login-box .password.empty {
+  font-size: 0.35rem;
+}
+.login-box .forget {
+  text-align: right;
+  margin-top: -0.4rem;
+}
+.login-box .forget a {
+  font-size: 0.3rem;
+  color: rgba(2, 133, 232, 0.95);
+}
+.login-box .login-button {
+  margin: 0.5rem 0;
+  width: 8.6rem;
+  height: 0.95rem;
+  font-size: 0.4rem;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgba(2, 133, 232, 0.95);
+}
+.login-box .login-button.disabled {
+  background-color: rgba(2, 133, 232, 0.6);
+  color: #ddd;
+}
+.login-box .user-agreement {
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+.login-box .user-agreement span {
+  color: #888;
+  font-size: 0.3rem;
+}
+.login-box .user-agreement input {
+  width: 0.3rem;
+  height: 0.3rem;
+}
+.login-box .user-agreement a {
+  color: #48487b;
+  font-size: 0.3rem;
+}
