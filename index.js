@@ -25,24 +25,33 @@ const loginBox = new Vue({
     }
   },
   watch: {
-    account: function() {
-      this.account = this.account.replace(/\D/g, '');
-      this.accountIsEmpty = this.account.length === 0;
-      let formattedAccount = this.account;
-      if (this.account.length > 3)
-        formattedAccount = this.account.substring(0, 3) + ' ' + this.account.substring(3);
-      if (this.account.length > 7)
-        formattedAccount = formattedAccount.substring(0, 8) + ' ' + formattedAccount.substring(8);
-      this.account = formattedAccount;
-      this.checkButton();
+    account: {
+      immediate: true,
+      handler: function() {
+        this.account = this.account.replace(/\D/g, '');
+        this.accountIsEmpty = this.account.length === 0;
+        let formattedAccount = this.account;
+        if (this.account.length > 3)
+          formattedAccount = this.account.substring(0, 3) + ' ' + this.account.substring(3);
+        if (this.account.length > 7)
+          formattedAccount = formattedAccount.substring(0, 8) + ' ' + formattedAccount.substring(8);
+        this.account = formattedAccount;
+        this.checkButton();
+      }
     },
-    password: function() {
-      this.password = this.password.trim();
-      this.passwordIsEmpty = this.password.length === 0;
-      this.checkButton();
+    password: {
+      immediate: true,
+      handler: function() {
+        this.password = this.password.trim();
+        this.passwordIsEmpty = this.password.length === 0;
+        this.checkButton();
+      }
     },
-    isAgree: function() {
-      this.checkButton();
+    isAgree: {
+      immediate: true,
+      handler: function() {
+        this.checkButton();
+      }
     }
   }
 })
